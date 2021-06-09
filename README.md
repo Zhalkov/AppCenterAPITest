@@ -10,3 +10,5 @@ For using this app, you need to know:
 Tasks performed during execution:
 - Print list of branches for the app and start build for each one
 - Print the following information to console output: *< branch name > build <completed/failed> in < duration > seconds. Link to build logs: < link >*
+
+NB: The project was created in VS2019, AppCenterAPITest.exe file is located in *AppCenterAPITest\bin\Debug* folder
