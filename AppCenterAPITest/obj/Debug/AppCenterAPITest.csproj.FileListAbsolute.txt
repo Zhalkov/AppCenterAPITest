@@ -1,0 +1,10 @@
+C:\Users\v-nizhal\source\repos\AppCenterAPITest\AppCenterAPITest\bin\Debug\AppCenterAPITest.exe.config
+C:\Users\v-nizhal\source\repos\AppCenterAPITest\AppCenterAPITest\bin\Debug\AppCenterAPITest.exe
+C:\Users\v-nizhal\source\repos\AppCenterAPITest\AppCenterAPITest\bin\Debug\AppCenterAPITest.pdb
+C:\Users\v-nizhal\source\repos\AppCenterAPITest\AppCenterAPITest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\v-nizhal\source\repos\AppCenterAPITest\AppCenterAPITest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\v-nizhal\source\repos\AppCenterAPITest\AppCenterAPITest\obj\Debug\AppCenterAPITest.csproj.AssemblyReference.cache
+C:\Users\v-nizhal\source\repos\AppCenterAPITest\AppCenterAPITest\obj\Debug\AppCenterAPITest.csproj.CoreCompileInputs.cache
+C:\Users\v-nizhal\source\repos\AppCenterAPITest\AppCenterAPITest\obj\Debug\AppCenterAPITest.csproj.CopyComplete
+C:\Users\v-nizhal\source\repos\AppCenterAPITest\AppCenterAPITest\obj\Debug\AppCenterAPITest.exe
+C:\Users\v-nizhal\source\repos\AppCenterAPITest\AppCenterAPITest\obj\Debug\AppCenterAPITest.pdb
