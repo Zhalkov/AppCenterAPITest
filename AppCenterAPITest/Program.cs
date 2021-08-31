@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Net;
 using Newtonsoft.Json;
@@ -9,18 +9,42 @@ namespace AppCenterAPITest
     class Program
     {
         private static string UserAPIToken;
+        private static int retryCount;
         static void Main(string[] args)
         {
             string responseString, url;
-            string AppName, Owner;
-            
+            string AppName="", Owner="";
+
             //Enter user data
-            Console.Write("Enter App name: ");
-            AppName = Console.ReadLine();
-            Console.Write("Enter owner name: ");
-            Owner = Console.ReadLine();
-            Console.Write("Enter user API token: ");
-            UserAPIToken = Console.ReadLine(); 
+            if (args.Length != 0)
+            {
+                if (args.Length < 3)
+                {
+                    Console.WriteLine("There are 3 required parameters: Application Name, Owner and User API Token");
+                    Console.Read();
+                    System.Environment.Exit(1);
+                }
+                else
+                {
+                    AppName = args[0];
+                    Owner = args[1];
+                    UserAPIToken = args[2];
+                    //Option for setting retry count
+                    if (args.Length == 4)
+                            retryCount = Convert.ToInt32(args[3]);
+                }
+            }
+            else
+            { 
+                Console.Write("Enter App name: ");
+                AppName = Console.ReadLine();
+                Console.Write("Enter owner name: ");
+                Owner = Console.ReadLine();
+                Console.Write("Enter user API token: ");
+                UserAPIToken = Console.ReadLine();
+                Console.Write("Enter number of retries: ");
+                retryCount = Convert.ToInt32(Console.ReadLine());
+            }           
 
             //Get array of branches
             url = $@"https://api.appcenter.ms/v0.1/apps/{Owner}/{AppName}/branches";
@@ -97,7 +121,8 @@ namespace AppCenterAPITest
             string responseString = "";
 
             //Sometimes request fails with (401)Unathorized on external reason
-            int retryCount = 5;
+            if (retryCount == 0)
+                retryCount = 5;
             while (retryCount > 0)
             {
                 try
