@@ -9,7 +9,7 @@ namespace AppCenterAPITest
     class Program
     {
         private static string UserAPIToken;
-        private static int retryCount;
+        private static int retryCount=0;
         static void Main(string[] args)
         {
             string responseString, url;
